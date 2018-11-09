@@ -4,6 +4,12 @@ let element = document.getElementById("presentation-message")
 let presentationMessage = document.getElementById("pr")
 let presentationDiv = document.getElementById("presentation-div")
 
+myApp.controller("DefaultController", ($scope) => {
+
+  $scope.message = "... Si se puede imaginar, se puede programar..."
+
+})
+
 myApp.controller("NavBarController", ($scope) => {
 
   $scope.title = "Batty Developers"
@@ -13,16 +19,20 @@ myApp.controller("NavBarController", ($scope) => {
       name: "INICIO"
     },
     {
-      name: "SERVICIO"
+      name: "SERVICIO",
+      classname: "services"
     },
     {
-      name: "NOSOTROS"
+      name: "NOSOTROS",
+      classname: "about"
     },
     {
-      name: "TECNOLOGIAS"
+      name: "TECNOLOGIAS",
+      classname: "technologies"
     },
     {
-      name: "EQUIPO"
+      name: "EQUIPO",
+      classname: "team"
     }
   ]
 
@@ -144,7 +154,7 @@ myApp.controller("AboutController", ($scope) => {
 
 myApp.controller("TechnologiesController", ($scope) => {
 
-  $scope.title = "TECNOLOGÍAS USADAS PARA DESARROLLOS"
+  $scope.title = "TECNOLOGÍAS IMPLEMENTADAS EN LOS PROYECTOS"
 
   $scope.technologies = [
     {
