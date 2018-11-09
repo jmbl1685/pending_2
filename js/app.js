@@ -10,19 +10,19 @@ myApp.controller("NavBarController", ($scope) => {
 
   $scope.options = [
     {
-      name: "HOME"
+      name: "INICIO"
     },
     {
-      name: "SERVICES"
+      name: "SERVICIO"
     },
     {
-      name: "PORTFOLIO"
+      name: "NOSOTROS"
     },
     {
-      name: "TEAM"
+      name: "TECNOLOGIAS"
     },
     {
-      name: "CONTACT"
+      name: "EQUIPO"
     }
   ]
 
@@ -86,37 +86,37 @@ myApp.controller("PresentationController", ($scope, $interval) => {
 
 myApp.controller("ServicesController", ($scope) => {
 
-  $scope.title = "CORE SERVICES"
+  $scope.title = "NUESTROS SERVICIOS"
 
   $scope.services = [
     {
       logo: "img/222600.svg",
-      title: "BEAUTIFUL DESIGNS",
+      title: "APLICACIONES WEB",
       message: "Proin iaculis purus consequat sem digni ssim. Donec porttitora entum aenean rhoncus posuere odio in."
     },
     {
       logo: "img/841364.svg",
-      title: "WEB DEVELOPMENT",
+      title: "SITIOS WEB",
       message: "Proin iaculis purus consequat sem digni ssim. Donec porttitora entum aenean rhoncus posuere odio in."
     },
     {
       logo: "img/1170607.svg",
-      title: "CLOUD SERVICES",
+      title: "SERVICIOS EN LA NUBE",
       message: "Proin iaculis purus consequat sem digni ssim. Donec porttitora entum aenean rhoncus posuere odio in."
     },
     {
       logo: "img/148941.svg",
-      title: "24/7 SUPPORT",
+      title: "SOPORTE 24/7",
       message: "Proin iaculis purus consequat sem digni ssim. Donec porttitora entum aenean rhoncus posuere odio in."
     },
     {
       logo: "img/1141779.svg",
-      title: "STADISTICS",
+      title: "INCREMENTO",
       message: "Proin iaculis purus consequat sem digni ssim. Donec porttitora entum aenean rhoncus posuere odio in."
     },
     {
       logo: "img/959318.svg",
-      title: "SAVINGS",
+      title: "AHORRO",
       message: "Proin iaculis purus consequat sem digni ssim. Donec porttitora entum aenean rhoncus posuere odio in."
     }
   ]
@@ -125,19 +125,26 @@ myApp.controller("ServicesController", ($scope) => {
 
 myApp.controller("AboutController", ($scope) => {
 
-  $scope.title = "ABOUT US"
+  $scope.title = "NOSOTROS"
 
   $scope.img = 'img/951862.svg'
 
-  $scope.mission = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. letious versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+  $scope.mission = {
+    title: "Misión",
+    description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. letious versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+  }
 
-  $scope.vision = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. letious versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+  $scope.vision = {
+    title: "Visión",
+    description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. letious versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+  }
+
 
 })
 
 myApp.controller("TechnologiesController", ($scope) => {
 
-  $scope.title = "TECHNOLOGIES USED FOR DEVELOPMENTS"
+  $scope.title = "TECNOLOGÍAS USADAS PARA DESARROLLOS"
 
   $scope.technologies = [
     {
@@ -226,7 +233,7 @@ myApp.controller("TechnologiesController", ($scope) => {
 
 myApp.controller("TeamController", ($scope) => {
 
-  $scope.title = "OUR AMAZING TEAM"
+  $scope.title = "EQUIPO DE TRABAJO"
 
   $scope.team = [
     {
@@ -241,8 +248,8 @@ myApp.controller("TeamController", ($scope) => {
     },
     {
       photo: "img/user_none.png",
-      fullname: "YOU?",
-      rol: "What is your rol?"
+      fullname: "Tú?",
+      rol: "Cúal es tu rol?"
     }
   ]
 

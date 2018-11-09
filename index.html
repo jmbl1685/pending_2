@@ -12,7 +12,7 @@
     rel="stylesheet">
 
 
-<link rel="stylesheet" type="text/css" href="//use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" type="text/css" href="//use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link rel="stylesheet" type="text/css" href="css/grid.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -64,7 +64,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div><br><br>
     <!---//services--->
 
     <div ng-controller="AboutController">
@@ -76,19 +76,30 @@
             <img src="{{img}}" alt="">
           </div>
           <div class="col-xs-12 col-sm-10 col-md-8">
-            <h3>Mission</h3>
-            <p class="text-justify">{{mission}}</p>
-            <h3>Vision</h3>
-            <p class="text-justify">{{vision}}</p>
+            <h3>{{mission.title}}</h3>
+            <p class="text-justify">{{mission.description}}</p>
+            <h3>{{vision.title}}</h3>
+            <p class="text-justify">{{vision.description}}</p>
           </div>
         </div>
       </div>
 
 
     </div>
+  </div><br><br><br><br><br>
+
+  <div class="center" id="presentation-div" ng-controller="PresentationController" ng-style="{'background-image': 'url(https://stmed.net/sites/default/files/abstract-wallpapers-25162-2011455.jpg)', 'height': '300px'}">
+
+    <div style="color: #FEFEFE">
+      <h1>"... Si se puede imaginar, se puede programar..."</h1>
+    </div>
+
+  </div><br><br>
+
+  <div class="container-fluid">
 
     <div ng-controller="TechnologiesController">
-    
+
       <div class="container"><br>
         <h1 class="text-center">{{title}}</h1><br>
         <div class="row">
@@ -99,18 +110,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <img class="logo-technology" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/500px-Angular_full_color_logo.svg.png"
-              alt="">
-          </div>
-          <div class="col-6">
-            <h1>Angular 7</h1>
-          </div>
-        </div>
-      </div> -->
 
     </div>
 
@@ -128,7 +127,7 @@
           <a href=""><i class="fab fa-facebook"></i></a>
           <a href=""><i class="fab fa-linkedin"></i></a>
           <a href=""><i class="fas fa-envelope"></i></a>
-          
+
         </div>
       </div>
 
