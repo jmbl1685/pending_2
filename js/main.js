@@ -70,6 +70,7 @@ function FixedNavBarEnable(value, element) {
 }
 
 function ShowNavBarResponsive(){
+    
     let state = document.getElementById('navbar').classList.toggle('bounceInDown')
     document.getElementById('navbar').style.display = 'block'
     document.getElementById('btn-navbar-responsive').src = 'https://image.flaticon.com/icons/svg/189/189678.svg'

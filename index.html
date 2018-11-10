@@ -93,7 +93,7 @@
         <h1 class="text-center">{{title}}</h1><br>
         <div class="row">
           <div data-aos="fade-down" ng-repeat="service in services" class="col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center">
-            <img class="logo-size" src="{{service.logo}}">
+            <img class="logo-size" ng-src="{{service.logo}}">
             <h3>{{service.title}}</h3>
             <p>{{service.message}}</p>
           </div>
@@ -108,7 +108,7 @@
       <div class="about container">
         <div class="row">
           <div data-aos="fade-right" class="col-md-4 text-center">
-            <img src="{{img}}" alt="">
+            <img ng-src="{{img}}" alt="">
           </div>
           <div data-aos="fade-left" class="col-xs-12 col-sm-10 col-md-8">
             <h3>{{mission.title}}</h3>
@@ -139,7 +139,7 @@
         <h1 class="text-center">{{title}}</h1><br>
         <div class="row">
           <div data-aos="zoom-out" ng-repeat="tech in technologies" class="col-sm-6 col-md-4 col-lg-4 col-xl-4 text-center">
-            <img class="logo-technology" src="{{tech.logo}}">
+            <img class="logo-technology" ng-src="{{tech.logo}}">
             <p>{{tech.name}}</p>
             <p>{{tech.description}}</p>
           </div>
@@ -154,7 +154,7 @@
 
       <div class="team row">
         <div data-aos="flip-left" ng-repeat="t in team" class="col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center">
-          <img class="photo-size" src="{{t.photo}}">
+          <img class="photo-size" ng-src="{{t.photo}}">
           <h3>{{t.fullname}}</h3>
           <p>{{t.rol}}</p>
           <a href=""><i class="fab fa-github"></i></a>
@@ -170,25 +170,6 @@
 
     <br><br>
   </div>
-
-  <!-- <footer id="footer">
-    <div class="container">
-      <label for="name">Nombre</label>
-      <input id="name" type="text">
-      <label for="name">Correo Electrónico</label>
-      <input id="name" type="text">
-      <label for="name">¿En que podemos ayudarte?</label>
-      <input id="name" type="text">
-    </div>
-  </footer>
-
-  <footer id="copyright">
-    <div class="container text-center" style="margin-top: 20px !important">
-      <p>© 2018 Batty Developers. Todos los derechos reservados | Desarrollado por
-        <a href="http://w3layouts.com"> Juan Batty</a>
-      </p>
-    </div>
-  </footer> -->
 
   <script type="text/javascript" src="js/smoothscroll.js"></script>
   <script type="text/javascript" src="js/aos.js"></script>
