@@ -30,6 +30,13 @@ function ScrollAnimation(e){
   const classname = e.srcElement.id
   e.preventDefault()
   document.querySelector(`.${classname}`).scrollIntoView({ behavior: 'smooth' });
+
+  let BrowserWith = window.innerWidth;
+
+  if(BrowserWith < 1200){
+    ShowNavBarResponsive()
+  }
+
 }
 
 function ScrollUp(){
@@ -57,8 +64,21 @@ function FixedNavBarEnable(value, element) {
   };
 
   if (scroll.BODY > value || scroll.DOCUMENT_ELEMENT > value)
-      element.setAttribute( "class", "nav-fixed nav-fixed-bc")
+      element.setAttribute( "class", "nav-fixed nav-fixed-bc animated")
   else
-      element.setAttribute( "class", "nav-fixed")
+      element.setAttribute( "class", "nav-fixed animated")
 }
 
+function ShowNavBarResponsive(){
+    let state = document.getElementById('navbar').classList.toggle('bounceInDown')
+    document.getElementById('navbar').style.display = 'block'
+    document.getElementById('btn-navbar-responsive').src = 'https://image.flaticon.com/icons/svg/189/189678.svg'
+
+    if (state){
+        //document.getElementById('navbar').classList.toggle('bounceOutLeft')
+    } else {
+        //document.getElementById('navbar').classList.add('bounceOutLeft')
+        document.getElementById('navbar').style.display = 'none'
+        document.getElementById('btn-navbar-responsive').src = 'https://image.flaticon.com/icons/svg/189/189666.svg'
+    }
+}

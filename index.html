@@ -2,29 +2,41 @@
 <html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
-  <meta name="keywords" content="Batty" />
-  <meta name="title" content="Batty Developers" />
-  <link rel="shortlink" href="https://jmbl1685.github.io/personal-website/" />
-  <link rel="canonical" href="https://jmbl1685.github.io/personal-website/" />
-  <meta id="MetaDescription" name="DESCRIPTION" content="Nosotros de ayudamos en el desarrollo de tu aplicación, ídea de negocio, páginas web. Todo lo relacionado a nuevas tecnologías. 
-" />
-  <meta name="keywords" content="batty, jmbl1685, juan batty" />
-  <meta id="MetaGenerator" name="GENERATOR" content="Angularjs " />
-  <meta name="MobileOptimized" content="width" />
-  <meta name="HandheldFriendly" content="true" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Batty Developers</title>
+
+  <link rel="canonical" href="https://jmbl1685.github.io/personal-website/">
+  <meta name="robots" content="ALL">
+  <meta name="author" content="Juan Manuel Batty Linero">
+  <link rel="author" href="https://twitter.com/jmbl1685/">
+
+  <meta name="description" content="Batty Developers">
+  <meta http-equiv="content-language" content="en-us">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:title" content="Batty Developers">
+  <meta property="og:url" content="https://jmbl1685.github.io/personal-website/">
+  <meta property="og:site_name" content="Juan Manuel Batty Linero">
+  <meta property="og:type" content="website">
+
+  <meta property="og:description" content="Nosotros de ayudamos en el desarrollo de tu aplicación, ídea de negocio, páginas web. Todo lo relacionado a nuevas tecnologías.">
+  <meta property="og:image" content="https://pbs.twimg.com/profile_images/1042133860312666113/g3IwLAYG_400x400.jpg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@jmbl1685">
+  <meta name="twitter:creator" content="@jmbl1685">
+  <meta name="twitter:url" content="https://twitter.com/jmbl1685/">
+  <meta name="twitter:title" content="Batty Developers">
+  <meta name="twitter:description" content="Nosotros de ayudamos en el desarrollo de tu aplicación, ídea de negocio, páginas web. Todo lo relacionado a nuevas tecnologías.">
+  <meta name="twitter:image:src" content="https://pbs.twimg.com/profile_images/1042133860312666113/g3IwLAYG_400x400.jpg">
+
+  <meta name="theme-color" content="#2196f3">
+  <meta name="msapplication-TileColor" content="#2196f3">
 
   <link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
   <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
     rel="stylesheet">
-
-
   <link rel="stylesheet" type="text/css" href="//use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link rel="stylesheet" href="css/aos.css" />
   <link rel="stylesheet" type="text/css" href="css/grid.css">
@@ -34,18 +46,25 @@
 
 <body ng-app="myApp" ng-controller="DefaultController">
 
-  <img class="hvr-pulse-grow" onclick="ScrollUp()" src="img/25649.svg" height="60" width="60" id="Up">
+  <img class="hvr-pulse-grow" onclick="ShowNavBarResponsive()" src="https://image.flaticon.com/icons/svg/189/189666.svg" height="60" width="60" id="btn-navbar-responsive">
 
-  <div id="presentation-div" ng-controller="PresentationController" ng-style="{'background-image': 'url({{currentMessage.img}})', 'height': '100vh', 'margin': '0 auto !important'}">
+  <img class="hvr-pulse-grow" onclick="ScrollUp()" src="img/25649.svg" height="60" width="60" id="Up">
+  
+  <div id="presentation-div" ng-controller="PresentationController" ng-style="{'background-image': 'url({{currentMessage.img}})'}">
 
     <!----navbar--->
-    <nav id="navbar" class="nav-fixed" ng-controller="NavBarController">
+    <nav id="navbar" class="nav-fixed animated" ng-controller="NavBarController">
       <div class="container">
         <div class="row">
-          <div class="col-5">
+          <div id="title" class="col-4">
             <h1>{{title}}</h1>
+
+            <nav id="navigation">
+              <!--navigation goes here-->
+            </nav>
+
           </div>
-          <div class="col-7" style="margin-top: 13px">
+          <div class="col-8 change-col-8" style="margin-top: 13px">
             <ul>
               <li onclick="ScrollAnimation(event)" id="{{opt.classname}}" class="prueba" ng-repeat="opt in options">{{opt.name}}</li>
             </ul>
@@ -171,12 +190,11 @@
     </div>
   </footer> -->
 
-  <script src="js/smoothscroll.js"></script>
-  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="js/smoothscroll.js"></script>
+  <script type="text/javascript" src="js/aos.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
-
 
 </body>
 
