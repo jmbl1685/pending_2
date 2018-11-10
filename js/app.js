@@ -6,7 +6,7 @@ let presentationDiv = document.getElementById("presentation-div")
 
 myApp.controller("DefaultController", ($scope) => {
 
-  $scope.message = "... Si se puede imaginar, se puede programar..."
+  $scope.message = "''... Si se puede imaginar, se puede programar...''"
 
 })
 
@@ -27,7 +27,7 @@ myApp.controller("NavBarController", ($scope) => {
       classname: "about"
     },
     {
-      name: "TECNOLOGIAS",
+      name: "TECNOLOGÍAS",
       classname: "technologies"
     },
     {
@@ -42,24 +42,24 @@ myApp.controller("PresentationController", ($scope, $interval) => {
 
   const initialMessages = [
     {
-      title: "BUILD THE WEBSITE OF YOUR DREAMS 1",
-      message: "1 We are a digital agency that believes in building things that are meaningful!",
+      title: "TECNOLOGÍAS DE PUNTA",
+      message: "Uso de plataformas y marcos de trabajo implementado uso de mejores prácticas en el desarrollo de software.",
+      img: "img/Block_Chain_Developer_Computer_Programmer_050318.jpg"
+    },
+    {
+      title: "RAPIDÉZ, CONFIABILIDAD, DISPONIBILIDAD...",
+      message: "Tu información estará segura, y disponible gracias al uso de computación en la nube.",
       img: "img/4_strategic_vision.jpg"
     },
     {
-      title: "BUILD THE WEBSITE OF YOUR DREAMS 2",
+      title: "DISEÑO DE ALTA CÁLIDAD",
       message: "2 We are a digital agency that believes in building things that are meaningful!",
-      img: "img/car-mechanic-repair-Your-car.jpg"
+      img: "img/Laptop-reduced.jpg"
     },
     {
-      title: "BUILD THE WEBSITE OF YOUR DREAMS 3",
+      title: "SOPORTE, ASESORÍA Y EXPERENCIA",
       message: "2 We are a digital agency that believes in building things that are meaningful!",
-      img: "img/juridico.jpg"
-    },
-    {
-      title: "BUILD THE WEBSITE OF YOUR DREAMS 4",
-      message: "2 We are a digital agency that believes in building things that are meaningful!",
-      img: "img/ep70.jpg"
+      img: "img/SL_Overview_1_HeroFullBleed_3_V1.jpg"
     }
   ]
 

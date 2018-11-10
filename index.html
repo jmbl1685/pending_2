@@ -34,7 +34,7 @@
 
 <body ng-app="myApp" ng-controller="DefaultController">
 
-  <img class="hvr-pulse-grow" onclick="ScrollUp()" src="https://image.flaticon.com/icons/svg/179/179419.svg" height="60" width="60" id="Up">
+  <img class="hvr-pulse-grow" onclick="ScrollUp()" src="img/25649.svg" height="60" width="60" id="Up">
 
   <div id="presentation-div" ng-controller="PresentationController" ng-style="{'background-image': 'url({{currentMessage.img}})', 'height': '100vh', 'margin': '0 auto !important'}">
 
@@ -52,14 +52,14 @@
           </div>
         </div>
       </div>
-    </nav>
+    </nav><br><br>
     <!---//navbar--->
 
     <!---presentation--->
     <div id="presentation-message" class="center animated">
       <div style="color: #FEFEFE">
-        <h1>{{currentMessage.title}}</h1>
-        <p>{{currentMessage.message}}</p>
+        <h1 class="black-margin">{{currentMessage.title}}</h1>
+        <p class="black-margin">{{currentMessage.message}}</p>
       </div>
     </div>
     <!---//presentation--->
