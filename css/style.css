@@ -112,3 +112,18 @@ body {
   padding: 15px;
   border-radius: 4px;
 }
+
+.nav-fixed{
+  color: white; 
+  position: fixed;
+  top: 0; 
+  right: 0; 
+  left: 0;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.nav-fixed-bc{
+  background-color: #171613; 
+  opacity: 0.8;
+}

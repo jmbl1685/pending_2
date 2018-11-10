@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
 window.onscroll = () => {
 
   DisplayStyleValue(20, document.getElementById('Up'));
-  DisplayStyleValue(160, document.getElementById('div-title-2'));
+  FixedNavBarEnable(50, document.getElementById('navbar'));
 }
 
 function ScrollAnimation(e){
@@ -48,3 +48,17 @@ function DisplayStyleValue(value, element) {
   else
       element.style.display = 'none';
 }
+
+function FixedNavBarEnable(value, element) {
+
+  let scroll = {
+      BODY: document.body.scrollTop,
+      DOCUMENT_ELEMENT: document.documentElement.scrollTop
+  };
+
+  if (scroll.BODY > value || scroll.DOCUMENT_ELEMENT > value)
+      element.setAttribute( "class", "nav-fixed nav-fixed-bc")
+  else
+      element.setAttribute( "class", "nav-fixed")
+}
+

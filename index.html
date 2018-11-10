@@ -39,7 +39,7 @@
   <div id="presentation-div" ng-controller="PresentationController" ng-style="{'background-image': 'url({{currentMessage.img}})', 'height': '100vh', 'margin': '0 auto !important'}">
 
     <!----navbar--->
-    <nav ng-controller="NavBarController">
+    <nav id="navbar" class="nav-fixed" ng-controller="NavBarController">
       <div class="container">
         <div class="row">
           <div class="col-5">
@@ -62,7 +62,7 @@
         <p>{{currentMessage.message}}</p>
       </div>
     </div>
-    <!---//navbar--->
+    <!---//presentation--->
 
   </div>
 
@@ -152,7 +152,7 @@
     <br><br>
   </div>
 
-  <footer id="footer">
+  <!-- <footer id="footer">
     <div class="container">
       <label for="name">Nombre</label>
       <input id="name" type="text">
@@ -169,7 +169,7 @@
         <a href="http://w3layouts.com"> Juan Batty</a>
       </p>
     </div>
-  </footer>
+  </footer> -->
 
   <script src="js/smoothscroll.js"></script>
   <script src="js/aos.js"></script>
