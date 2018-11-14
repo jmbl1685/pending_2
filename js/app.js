@@ -12,7 +12,7 @@ myApp.controller("DefaultController", ($scope) => {
 
 myApp.controller("NavBarController", ($scope) => {
 
-  $scope.title = "Batty Developers"
+  $scope.title = "RFMTech"
 
   $scope.options = [
     {
@@ -141,12 +141,12 @@ myApp.controller("AboutController", ($scope) => {
 
   $scope.mission = {
     title: "Misión",
-    description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. letious versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    description: "Generar soluciones basadas en nuevas tecnología y software de cálidad permitiéndole de forma eficiente y sistematizada maximizar la productividad y recursos, generando bienestar y rentabilidad."
   }
 
   $scope.vision = {
     title: "Visión",
-    description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. letious versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    description: "Ser reconocida como una de las principales empresas de tecnología y desarrollo de software inicialmente en nuestra ciudad, especializada en brindar soluciones y estrategias a través de la investigación e innovación, abarcando todos los sectores de la sociedad."
   }
 
 

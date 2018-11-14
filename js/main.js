@@ -1,85 +1,97 @@
 window.addEventListener('load', () => {
 
-  AOS.init({
-      // Global settings
-      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-      initClassName: 'aos-init', // class applied after initialization
-      animatedClassName: 'aos-animate', // class applied on animation
-      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-
-      // Settings that can be overriden on per-element basis, by `data-aos-*` attributes:
-      offset: 120, // offset (in px) from the original trigger point
-      delay: 0, // values from 0 to 3000, with step 50ms
-      duration: 400, // values from 0 to 3000, with step 50ms
-      easing: 'ease', // default easing for AOS animations
-      once: false, // whether animation should happen only once - while scrolling down
-      mirror: false, // whether elements should animate out while scrolling past them
-      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-  });
+    AOS.init({
+        disable: false,
+        startEvent: 'DOMContentLoaded',
+        initClassName: 'aos-init',
+        animatedClassName: 'aos-animate',
+        useClassNames: false,
+        offset: 120,
+        delay: 0,
+        duration: 400,
+        easing: 'ease',
+        once: false,
+        mirror: false,
+        anchorPlacement: 'top-bottom',
+    })
 
 });
 
 window.onscroll = () => {
 
-  DisplayStyleValue(20, document.getElementById('Up'));
-  FixedNavBarEnable(50, document.getElementById('navbar'));
+    DisplayStyleValue(20, document.getElementById('Up'));
+    FixedNavBarEnable(50, document.getElementById('navbar'));
 }
 
-function ScrollAnimation(e){
-  const classname = e.srcElement.id
-  e.preventDefault()
-  document.querySelector(`.${classname}`).scrollIntoView({ behavior: 'smooth' });
+function ScrollAnimation(e) {
+    const classname = e.srcElement.id
+    e.preventDefault()
+    document.querySelector(`.${classname}`).scrollIntoView({ behavior: 'smooth' });
 
-  let BrowserWith = window.innerWidth;
+    let BrowserWith = window.innerWidth;
 
-  if(BrowserWith < 1200){
-    ShowNavBarResponsive()
-  }
+    if (BrowserWith < 1200) {
+        ShowNavBarResponsive()
+    }
 
 }
 
-function ScrollUp(){
-  window.scroll({ top: 0, left: 0, behavior: 'smooth' })
+function ScrollUp() {
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' })
 }
 
 function DisplayStyleValue(value, element) {
 
-  let scroll = {
-      BODY: document.body.scrollTop,
-      DOCUMENT_ELEMENT: document.documentElement.scrollTop
-  };
+    let scroll = {
+        BODY: document.body.scrollTop,
+        DOCUMENT_ELEMENT: document.documentElement.scrollTop
+    };
 
-  if (scroll.BODY > value || scroll.DOCUMENT_ELEMENT > value)
-      element.style.display = 'block';
-  else
-      element.style.display = 'none';
+    if (scroll.BODY > value || scroll.DOCUMENT_ELEMENT > value)
+        element.style.display = 'block';
+    else
+        element.style.display = 'none';
 }
 
 function FixedNavBarEnable(value, element) {
 
-  let scroll = {
-      BODY: document.body.scrollTop,
-      DOCUMENT_ELEMENT: document.documentElement.scrollTop
-  };
+    let scroll = {
+        BODY: document.body.scrollTop,
+        DOCUMENT_ELEMENT: document.documentElement.scrollTop
+    };
 
-  if (scroll.BODY > value || scroll.DOCUMENT_ELEMENT > value)
-      element.setAttribute( "class", "nav-fixed nav-fixed-bc animated")
-  else
-      element.setAttribute( "class", "nav-fixed animated")
+    if (scroll.BODY > value || scroll.DOCUMENT_ELEMENT > value)
+        element.setAttribute("class", "nav-fixed nav-fixed-bc animated")
+    else
+        element.setAttribute("class", "nav-fixed animated")
 }
 
-function ShowNavBarResponsive(){
-    
-    let state = document.getElementById('navbar').classList.toggle('bounceInDown')
-    document.getElementById('navbar').style.display = 'block'
-    document.getElementById('btn-navbar-responsive').src = 'https://image.flaticon.com/icons/svg/189/189678.svg'
+function ShowNavBarResponsive() {
 
-    if (state){
-        //document.getElementById('navbar').classList.toggle('bounceOutLeft')
+    let navbar = document.getElementById('navbar')
+    let imgNavResponsive = document.getElementById('btn-navbar-responsive')
+
+    let flag = navbar.classList.toString().includes("bounceInDown")
+
+    if (flag) {
+        RemoveClass(navbar, "bounceInDown")
+        AddClass(navbar, "bounceOutUp")
+        RemoveClass(navbar, "bounceOutUp")
+        imgNavResponsive.src = 'https://image.flaticon.com/icons/svg/189/189666.svg'
     } else {
-        //document.getElementById('navbar').classList.add('bounceOutLeft')
-        document.getElementById('navbar').style.display = 'none'
-        document.getElementById('btn-navbar-responsive').src = 'https://image.flaticon.com/icons/svg/189/189666.svg'
+        AddClass(navbar, "bounceInDown")
+        navbar.style.display = 'block'
+        imgNavResponsive.src = 'https://image.flaticon.com/icons/svg/189/189678.svg'
     }
+}
+
+function AddClass(element, _class) {
+    element.classList.add(_class)
+}
+
+function RemoveClass(element, _class) {
+    setTimeout(() => {
+        element.classList.remove(_class)
+        element.style.display = 'none'
+    }, 900)
 }
