@@ -1,6 +1,4 @@
 
-'use strict'
-
 const gulp = require('gulp')
 const autoprefixer = require('gulp-autoprefixer')
 const csso = require('gulp-csso')
